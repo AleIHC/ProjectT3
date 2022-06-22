@@ -1,0 +1,5 @@
+package com.generation.Repositories;
+
+public interface MarcadorRepository {
+
+}

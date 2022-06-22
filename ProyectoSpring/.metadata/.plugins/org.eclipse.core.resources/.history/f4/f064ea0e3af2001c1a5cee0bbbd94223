@@ -1,0 +1,9 @@
+package com.generation.Repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.generation.Models.Marcador;
+
+public interface MarcadorRepository extends JpaRepository<Marcador, Long> {
+
+}
