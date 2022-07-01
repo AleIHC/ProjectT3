@@ -1,4 +1,4 @@
-package com.generation.Services;
+package com.generation.services;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.generation.Models.Marcador;
-import com.generation.Repositories.MarcadorRepository;
+import com.generation.models.Marcador;
+import com.generation.repositories.MarcadorRepository;
 
 @Service
 public class MarcadorService {

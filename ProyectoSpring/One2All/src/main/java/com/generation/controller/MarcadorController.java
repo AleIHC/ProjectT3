@@ -1,4 +1,4 @@
-package com.generation.Controller;
+package com.generation.controller;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.generation.Models.Marcador;
-import com.generation.Services.MarcadorService;
+import com.generation.models.Marcador;
+import com.generation.services.MarcadorService;
 
 @Controller
 @RequestMapping("/marcador")

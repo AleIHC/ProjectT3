@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce20e507-e151-45cb-86ee-3e92ccd91650" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/One2All/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One2All/src/main/java/com/generation/Controller/MarcadorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/src/main/java/com/generation/controller/MarcadorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One2All/src/main/java/com/generation/Controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/src/main/java/com/generation/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One2All/src/main/java/com/generation/Models/Marcador.java" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/src/main/java/com/generation/models/Marcador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One2All/src/main/java/com/generation/Models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/src/main/java/com/generation/models/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One2All/src/main/java/com/generation/Repositories/MarcadorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/src/main/java/com/generation/repositories/MarcadorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One2All/src/main/java/com/generation/Repositories/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/src/main/java/com/generation/repositories/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One2All/src/main/java/com/generation/Services/MarcadorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/src/main/java/com/generation/services/MarcadorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One2All/src/main/java/com/generation/Services/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/src/main/java/com/generation/services/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One2All/src/main/webapp/WEB-INF/marcador.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/src/main/webapp/WEB-INF/marcador.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One2All/src/main/webapp/WEB-INF/mostrarMarcadores.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/One2All/src/main/webapp/WEB-INF/mostrarMarcadores.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AwhhvrYWcvr0HDuFFNnOi4c5YG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/CursoJava/ProyectoOne2All/ProyectoSpring/One2All&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce20e507-e151-45cb-86ee-3e92ccd91650" name="Changes" comment="" />
+      <created>1655926677701</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655926677701</updated>
+      <workItem from="1655926680740" duration="12000" />
+      <workItem from="1655926735190" duration="69000" />
+      <workItem from="1656099551079" duration="54000" />
+      <workItem from="1656099968347" duration="55000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

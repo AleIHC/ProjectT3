@@ -1,4 +1,4 @@
-package com.generation.Controller;
+package com.generation.controller;
 
 public class UsuarioController {
 

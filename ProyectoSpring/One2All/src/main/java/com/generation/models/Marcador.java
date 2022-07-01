@@ -1,11 +1,9 @@
-package com.generation.Models;
+package com.generation.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name="marcadores")
@@ -21,6 +19,14 @@ public class Marcador {
 	private String descripcionMarcador;
 	
 	private int prioridad;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "categoria_id")//nombre de la columna
+	private Categoria categoria;//dato que esta asociado a esa columna(instancia auto)
+
+	@Column(updatable = false)
+	private Date createdAt;
+	private Date updatedAt;
 
 	public Marcador() {
 		super();
@@ -75,7 +81,23 @@ public class Marcador {
 	public void setPrioridad(int prioridad) {
 		this.prioridad = prioridad;
 	}
-	
-	
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	@PrePersist
+	protected void onCreate() {
+		this.createdAt = new Date();
+	}
+
+	@PreUpdate
+	protected void onUpdate() {
+		this.updatedAt = new Date();
+	}
 	
 }

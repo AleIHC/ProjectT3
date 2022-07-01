@@ -1,11 +1,8 @@
-package com.generation.Models;
+package com.generation.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
 @Table(name="usuarios")
@@ -19,6 +16,23 @@ public class Usuario {
 	private String password;
 	@Size(min=3, max=20)
 	private String correo;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "tablero_id")//nombre de la columna
+	private Tablero tablero;//dato que esta asociado a esa columna(instancia tablero)
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "datoPersonal_id")//nombre de la columna
+	private DatoPersonal datoPersonal;//dato que esta asociado a esa columna(instancia datoPersonal)
+
+	//ManyToMany UsuariosCategorias
+	@ManyToMany(fetch=FetchType.EAGER)
+	@JoinTable(
+			name = "usuarios_categorias",//nombre tabla relacional
+			joinColumns = @JoinColumn(name="usuario_id"),//desde la entidad actual
+			inverseJoinColumns = @JoinColumn(name = "categoria_id")//la otra entidad o tabla
+	)
+	private List<Categoria> categorias;
 	public Usuario() {
 		super();
 	}
@@ -54,6 +68,31 @@ public class Usuario {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
+
+	public Tablero getTablero() {
+		return tablero;
+	}
+
+	public void setTablero(Tablero tablero) {
+		this.tablero = tablero;
+	}
+
+	public DatoPersonal getDatoPersonal() {
+		return datoPersonal;
+	}
+
+	public void setDatoPersonal(DatoPersonal datoPersonal) {
+		this.datoPersonal = datoPersonal;
+	}
+
+	public List<Categoria> getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(List<Categoria> categorias) {
+		this.categorias = categorias;
+	}
+
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nombreUsuario=" + nombreUsuario + ", password=" + password + ", correo="
