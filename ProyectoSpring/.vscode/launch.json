@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-One2AllApplication<cristianyanez>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.generation.One2AllApplication",
+            "projectName": "cristianyanez",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
