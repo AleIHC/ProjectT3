@@ -1,9 +1,23 @@
 package com.generation.models;
 
+
 import javax.persistence.*;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 import javax.validation.constraints.Size;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name="marcadores")
@@ -24,6 +38,14 @@ public class Marcador {
 	@JoinColumn(name = "categoria_id")//nombre de la columna
 	private Categoria categoria;//dato que esta asociado a esa columna(instancia auto)
 
+	//ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(
+			name="usuarios_marcadores", //nombre de tabla relacional
+			joinColumns = @JoinColumn(name="usuario_id"), //desde a entidad actual
+			inverseJoinColumns = @JoinColumn(name="marcador_id") //desde la otra entidad
+	)
+	private List<Usuario> usuarios;
 	@Column(updatable = false)
 	private Date createdAt;
 	private Date updatedAt;
@@ -90,6 +112,15 @@ public class Marcador {
 		this.categoria = categoria;
 	}
 
+	public List<Usuario> getUsuarios() {
+		return usuarios;
+	}
+
+	public void setUsuarios(List<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
+
+
 	@PrePersist
 	protected void onCreate() {
 		this.createdAt = new Date();
@@ -99,5 +130,4 @@ public class Marcador {
 	protected void onUpdate() {
 		this.updatedAt = new Date();
 	}
-	
 }

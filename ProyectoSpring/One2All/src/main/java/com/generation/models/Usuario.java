@@ -1,8 +1,21 @@
 package com.generation.models;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
+
 import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="usuarios")
@@ -10,11 +23,15 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Size(min=3, max=20)
+	@NotNull
+	@Size(min=6,max = 20)
 	private String nombreUsuario;
+
 	@Size(min=6)
+	@NotNull
 	private String password;
-	@Size(min=3, max=20)
+
+	@Size(min=9,max = 20)
 	private String correo;
 
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -33,6 +50,10 @@ public class Usuario {
 			inverseJoinColumns = @JoinColumn(name = "categoria_id")//la otra entidad o tabla
 	)
 	private List<Categoria> categorias;
+
+	@ManyToMany(mappedBy = "usuarios",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	private List<Marcador> marcadores;
+
 	public Usuario() {
 		super();
 	}
@@ -91,6 +112,14 @@ public class Usuario {
 
 	public void setCategorias(List<Categoria> categorias) {
 		this.categorias = categorias;
+	}
+
+	public List<Marcador> getMarcadores() {
+		return marcadores;
+	}
+
+	public void setMarcadores(List<Marcador> marcadores) {
+		this.marcadores = marcadores;
 	}
 
 	@Override

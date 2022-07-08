@@ -70,3 +70,4 @@ public class Tablero {
         this.updatedAt = new Date();
     }
 }
+
