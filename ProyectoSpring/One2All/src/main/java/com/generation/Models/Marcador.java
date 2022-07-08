@@ -1,11 +1,21 @@
 package com.generation.Models;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+
 
 @Entity
 @Table(name="marcadores")
@@ -21,6 +31,33 @@ public class Marcador {
 	private String descripcionMarcador;
 	
 	private int prioridad;
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	public List<Usuario> getUsuarios() {
+		return usuarios;
+	}
+
+	public void setUsuarios(List<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
+	
+
+	@NotNull
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "categoria_id")  //quien tenga el join column se quedará con la foreign key 
+	private Categoria categoria;
+
+	//ManyToMany
+	@ManyToMany(mappedBy = "marcadores",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	private List<Usuario> usuarios;
+	
 
 	public Marcador() {
 		super();
@@ -75,7 +112,5 @@ public class Marcador {
 	public void setPrioridad(int prioridad) {
 		this.prioridad = prioridad;
 	}
-	
-	
-	
+
 }

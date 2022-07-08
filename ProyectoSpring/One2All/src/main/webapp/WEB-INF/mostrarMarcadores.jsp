@@ -19,7 +19,14 @@
                 <c:if test="${msgError!=null }">
                     <c:out value="${msgError }"></c:out>
                 </c:if>
+
                 <div class="container">
+                    <!--Formulario de busqueda-->
+                    <form action="/marcador/buscar" method="post">
+                        <label for="categoría">Categoria</label>
+                        <input type="number" id="categoria" name="id" placeholder="Filtra por categoría">
+                        <input type="submit" value="Filtrar">
+                    </form>
                     <table class="table">
                         <thead>
                             <tr>
@@ -27,20 +34,23 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Url</th>
                                 <th scope="col">Descripcion</th>
+                                <th scope="col">Icono</th>
+                                <th scope="col">Categoría</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <c:forEach var="marcador" items="${marcadoresCapturados}">
                                 <tr>
-
                                     <th scope="row">${marcador.id}</th>
                                     <td>${marcador.nombreMarcador}</td>
-                                    <td>${marcador.urlMarcador}</td>
+                                    <td><a href="${marcador.urlMarcador}">Link</a></td>
                                     <td>${marcador.descripcionMarcador}</td>
+                                    <td><img src="http://www.google.com/s2/favicons?domain=${marcador.urlMarcador}"></td>
+                                    <td>${marcador.categoria.nombre}</td>
                                     <td><a class="btn btn-warning" href="/marcador/editar/${marcador.id}" role="button">Editar</a>
                                     </td>
-                                    <td><a class="btn btn-danger" href="eliminar/${marcador.id}" role="button">Eliminar</a>
+                                    <td><a class="btn btn-danger" href="/marcador/eliminar/${marcador.id}" role="button">Eliminar</a>
                                     </td>
                                 </tr>
                             </c:forEach>

@@ -20,7 +20,6 @@ public void saveMarcador(@Valid Marcador marcador) {
 		marcadorRepository.save(marcador);
 	}
 	public List<Marcador> findAll() {
-		// TODO Auto-generated method stub
 		return marcadorRepository.findAll();
 	}
 	public Marcador buscarId(Long id) {
@@ -32,5 +31,9 @@ public void saveMarcador(@Valid Marcador marcador) {
 		marcadorRepository.deleteById(id);
 		
 	}
+    public List<Marcador> buscarCategoria(Integer id) {
+        return marcadorRepository.findCategoria(id);
+    }
+
 
 }
