@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Generation\CursoJava\git\ProjectT3\ProyectoSpring\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+284324962.index

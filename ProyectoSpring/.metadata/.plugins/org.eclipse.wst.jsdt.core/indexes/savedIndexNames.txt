@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Generation\CursoJava\git\ProjectT3\ProyectoSpring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2075329064.index
+429927588.index
+1903554474.index
+1244417499.index
+4207491135.index
+1075616305.index
+2580722117.index

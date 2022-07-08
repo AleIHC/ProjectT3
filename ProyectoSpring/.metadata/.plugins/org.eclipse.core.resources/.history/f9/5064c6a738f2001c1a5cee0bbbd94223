@@ -1,0 +1,25 @@
+package com.generation.Models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name="marcadores")
+public class Marcador {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Size(min=3, max=20)
+	private String nombreMarcador;
+	
+	private String urlMarcador;
+	
+	private String descripcionMarcador;
+	
+	private int prioridad;
+	
+}
