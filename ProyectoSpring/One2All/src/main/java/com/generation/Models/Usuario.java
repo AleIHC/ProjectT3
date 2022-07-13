@@ -28,6 +28,8 @@ public class Usuario {
 	@NotNull
 	private String password;
 
+	private String passwordConfirmacion;
+
 	@Size(min=9,max = 20)
 	private String correo;
 
@@ -43,7 +45,7 @@ public class Usuario {
 	public Usuario() {
 		super();
 	}
-	public Usuario(Long id, @Size(min = 3, max = 20) String nombreUsuario, @Size(min = 6) String password,
+	public Usuario(Long id, @Size(min = 3, max = 20) String nombreUsuario, @Size(min = 6) String password, 
 			@Size(min = 3, max = 20) String correo) {
 		super();
 		this.id = id;
@@ -75,6 +77,14 @@ public class Usuario {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
+
+	public String getPasswordConfirmacion() {
+		return passwordConfirmacion;
+	}
+	public void setPasswordConfirmacion(String passwordConfirmacion) {
+		this.passwordConfirmacion = passwordConfirmacion;
+	}
+
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nombreUsuario=" + nombreUsuario + ", password=" + password + ", correo="

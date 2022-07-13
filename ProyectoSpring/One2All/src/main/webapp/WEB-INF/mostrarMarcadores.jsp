@@ -22,6 +22,39 @@
 
                 <div class="container">
                     <!--Formulario de busqueda-->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body" style="display: flex !important; flex-direction: row !important; 
+                                            justify-content: space-between;">
+                                                <div style="display: flex; flex-direction:column;">
+                                                    <h5 class="card-title me-5">Linkedin</h5>
+                                                    <p class="card-text">Perfil de LinkedIn</p>
+                                                    <a href="https://www.linkedin.com" class="btn btn-primary"
+                                                        target="_blank">Abrir Pestaña</a>
+                                                </div>
+                                                <img src="img/linkedin.png" width="100px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body" style="display: flex !important; flex-direction: row !important; 
+                                            justify-content: space-between;">
+                                                <div style="display: flex; flex-direction:column;">
+                                                    <h5 class="card-title me-5">Slack</h5>
+                                                    <p class="card-text">Slack Generation</p>
+                                                    <a href="https://www.slack.com" class="btn btn-primary"
+                                                        target="_blank">Abrir Pestaña</a>
+                                                </div>
+                                                <img src="img/slack.png" width="100px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                     <form action="/marcador/buscar" method="post">
                         <label for="categoría">Categoria</label>
                         <input type="number" id="categoria" name="id" placeholder="Filtra por categoría">
