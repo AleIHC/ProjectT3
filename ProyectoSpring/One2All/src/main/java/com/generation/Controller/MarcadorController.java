@@ -65,6 +65,8 @@ public class MarcadorController {
 			}
 
 		}
+
+		
 		
 		// En esta ruta solo se muestran los marcadores registrados en la base de datos
 		@RequestMapping("/mostrar")
@@ -76,6 +78,18 @@ public class MarcadorController {
 			model.addAttribute("marcadoresCapturados", listaMarcadores);
 			model.addAttribute("categoriasCapturadas", listaCategorias);
 			return "mostrarMarcadores.jsp";
+		}
+
+		// En esta ruta solo se muestran los marcadores registrados en la base de datos
+		@RequestMapping("/mostrar2")
+		public String mostrar2(Model model) {
+			// obtener una lista de marcadores y de categorias
+			List<Categoria> listaCategorias =categoriaService.findAll();
+			List<Marcador> listaMarcadores = marcadorService.findAll();
+			// pasamos estas listas al mostrarMarcadores.jsp
+			model.addAttribute("marcadoresCapturados", listaMarcadores);
+			model.addAttribute("categoriasCapturadas", listaCategorias);
+			return "mostrarMarcadores2.jsp";
 		}
 		
 		@RequestMapping("/editar/{id}")//editar para despliegue de todos los marcadores
