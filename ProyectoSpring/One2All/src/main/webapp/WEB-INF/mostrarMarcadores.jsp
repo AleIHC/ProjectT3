@@ -1,9 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -22,9 +19,9 @@
 <div class="container">
     <!--Formulario de busqueda-->
     <form action="/marcador/buscar" method="post">
-        <%--@declare id="categoría"--%>
-        <label for="categoría">Categoria</label>
-        <input type="number" id="categoria" name="id" placeholder="Filtra por categoría">
+        <%--@declare id="categorÃ­a"--%>
+        <label for="categorÃ­a">Categoria</label>
+        <input type="number" id="categoria" name="id" placeholder="Filtra por categorÃ­a">
         <input type="submit" value="Filtrar">
     </form>
     <table class="table">
@@ -35,7 +32,7 @@
             <th scope="col">Url</th>
             <th scope="col">Descripcion</th>
             <th scope="col">Icono</th>
-            <th scope="col">Categoría</th>
+            <th scope="col">CategorÃ­a</th>
             <th scope="col">Acciones</th>
         </tr>
         </thead>
