@@ -1,10 +1,13 @@
-package com.generation.Controller;
+package com.generation.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import com.generation.models.Categoria;
+import com.generation.models.Usuario;
+import com.generation.services.CategoriaService;
+import com.generation.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,23 +15,16 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import com.generation.Models.Categoria;
-import com.generation.Models.Marcador;
-import com.generation.Models.Usuario;
-import com.generation.Services.CategoriaService;
-import com.generation.Services.UsuarioService;
 
 @Controller
 @RequestMapping("/registro")
 public class UsuarioController {
 
     @Autowired
-    UsuarioService  usuarioService;
+    UsuarioService usuarioService;
 
     @Autowired
-    CategoriaService  categoriaService;
+    CategoriaService categoriaService;
 
     @RequestMapping("")
     public String registro(@ModelAttribute("usuario") Usuario usuario){
@@ -53,21 +49,6 @@ public class UsuarioController {
             model.addAttribute("listaCategorias", listaCategorias.size());
             return "registrarCategoria.jsp";
         }
-    }
-
-    /*@RequestMapping("/usuario/login")
-    public String loginUsuario(@RequestParam(value = "correo")String correo,
-    @RequestParam(value = "password") String password, 
-    Model model, HttpSession session 
-    ) {
-        //Validar que los parámetros no sean null o vacíos
-        if(correo == null || password == null || correo.isEmpty() || password.isEmpty()){
-            model.addAttribute("msgError", "Todos los campos son obligatorios");
-            return "login.jsp";
-        } //Validar que coincida con la BD
-        
-        boolean usuarioValidado = usuarioService.validarUsuario(correo, password);
-        return "";
     }
 
     /*public String enviarAMarcador(@ModelAttribute("categoria") Categoria categoria,

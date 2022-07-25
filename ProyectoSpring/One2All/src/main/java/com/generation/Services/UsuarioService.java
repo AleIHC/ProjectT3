@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.generation.Models.Usuario;
 import com.generation.Repositories.UsuarioRepository;
-import org.springframework.security.crypto.bcrypt.BCrypt;
+//import org.springframework.security.crypto.bcrypt.BCrypt;
 
 @Service
 public class UsuarioService {
@@ -20,7 +20,7 @@ public class UsuarioService {
         usuarioRepository.save(usuario);
     }
 
-    public boolean saveUsuario(Usuario usuario) {
+    /*public boolean saveUsuario(Usuario usuario) {
 		Usuario existeUsuario = usuarioRepository.findByCorreo(usuario.getCorreo());
 		//Si no existe, lo creamos
 		if(existeUsuario == null) {
@@ -40,7 +40,7 @@ public class UsuarioService {
             /**Validaciones del service**/
             
             //Verificar email
-            boolean error = true;
+            /*boolean error = true;
             Usuario existeUsuario = usuarioRepository.findByCorreo(correo);
             if(existeUsuario == null) { //Si usuario es igual a null, no existe, es un error de ingreso
                 error = true;
@@ -53,7 +53,7 @@ public class UsuarioService {
                 }
             }
             return error;
-        }
+        }*/
 
 
 
