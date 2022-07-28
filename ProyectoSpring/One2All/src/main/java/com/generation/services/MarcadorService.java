@@ -35,5 +35,4 @@ public void saveMarcador(@Valid Marcador marcador) {
         return marcadorRepository.findCategoria(id);
     }
 
-
 }
